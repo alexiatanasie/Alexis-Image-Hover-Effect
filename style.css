@@ -1,0 +1,100 @@
+@font-face {
+    font-family: 'GreatVibes';
+    src: url('GreatVibes-Regular.ttf') format('truetype');
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh;
+    background-color: #121212;
+    font-family: Arial, sans-serif;
+  }
+
+  h1 {
+    font-family: 'GreatVibes', cursive;
+    font-size: 3rem;
+    color: #e5f3a8;
+    margin-bottom: 30px; 
+    text-align: center;
+  }
+
+  .card {
+    width: 400px;
+    aspect-ratio: 1 / 0.7;
+    border-radius: 8px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+  }
+
+  .card .image-box {
+    width: 100%;
+    height: 100%;
+  }
+
+  .card .image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); 
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .card:hover .overlay {
+    opacity: 1;
+  }
+
+  .card .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; 
+    background: transparent; 
+    color: #fff;
+    text-align: center;
+    padding: 20px; 
+    border: 2px solid #fff; 
+    border-radius: 8px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .card:hover .content {
+    opacity: 1;
+  }
+
+  .card .content h2 {
+    font-family: 'GreatVibes', cursive;
+    font-size: 2rem; 
+    margin-bottom: 15px;
+  }
+
+  .card .content p {
+    font-family: 'GreatVibes', cursive;
+    font-size: 1.5rem;
+    line-height: 1.8; 
+  }
